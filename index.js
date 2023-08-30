@@ -39,6 +39,10 @@ app.use(express.json());
 app.use("/categories", categoriesRouter);
 app.use("/sightings", sightingRouter);
 
+app.get("/", (req, res) => {
+  res.send("This is from github actions!! ");
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Express app listening on port ${PORT}!`);
